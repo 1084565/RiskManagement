@@ -342,6 +342,42 @@
           "type": "cds.String",
           "length": 10
         },
+        "AddressRepresentationCode": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "ContactRelationshipFunction": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "ContactRelationshipDepartment": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "Floor": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ContactPersonBuilding": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "RoomNumber": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ContactPersonPrfrdCommMedium": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "CorrespondenceShortName": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "InhouseMail": {
+          "type": "cds.String",
+          "length": 10
+        },
         "to_EmailAddress": {
           "type": "cds.Association",
           "target": "API_BUSINESS_PARTNER.A_AddressEmailAddress",
@@ -699,6 +735,10 @@
         },
         "BirthDate": {
           "type": "cds.Date"
+        },
+        "BusinessPartnerBirthDateStatus": {
+          "type": "cds.String",
+          "length": 1
         },
         "BusinessPartnerBirthplaceName": {
           "type": "cds.String",

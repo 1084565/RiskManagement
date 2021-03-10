@@ -43,7 +43,7 @@ modules:
     - name: RiskManagement-db
     - name: RiskManagement-uaa
 
-  # --------------------  APPROUTER -----------------------------
+ # --------------------  APPROUTER -----------------------------
  - name: RiskManagement-approuter
   # ------------------------------------------------------------
    type: nodejs
@@ -63,14 +63,14 @@ modules:
          artifacts:
            - ./*
          target-path: resources
-  # --------------------  UI APP -----------------------------
+  # --------------------  UI -----------------------------------
  - name: RiskManagement-app
   # ------------------------------------------------------------
    type: html5
    path: app
    build-parameters:
      supported-platforms: []
-
+     
 resources:
  # services extracted from CAP configuration
  # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
@@ -83,18 +83,17 @@ resources:
      service-plan: hdi-shared
    properties:
      hdi-service-name: ${service-name}
-
 # ------------------------------------------------------------
  - name: RiskManagement-uaa
 # ------------------------------------------------------------
    type: org.cloudfoundry.managed-service
    parameters:
      service: xsuaa
-     service-plan: application 
-     path: ./xs-security.json 
+     service-plan: application  
+     path: ./xs-security.json
      config:
-       xsappname: 'RiskManagement-${space}'
-       role-collections:
+      xsappname: 'RiskManagement-${space}'
+      role-collections:
          - name: 'RiskManager-${space}'
            description: Manage Risks
            role-template-references:
@@ -103,4 +102,5 @@ resources:
            description: View Risks
            role-template-references:
              - $XSAPPNAME.RiskViewer
+
 

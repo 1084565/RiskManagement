@@ -20,12 +20,20 @@ using { managed } from '@sap/cds/common';
     timeline     : String;
     risks        : Association to many Risks on risks.miti = $self;
   }
-
   // using an external service from S/4
  using {  API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
 
- entity BusinessPartners as projection on external.A_BusinessPartner {
+ entity BusinessPartnersS4 as projection on external.A_BusinessPartner {
     key BusinessPartner,
     LastName,
     FirstName
-  } 
+  }
+
+  // using a local service instead of the S/4 one with the same type of entity
+   entity BusinessPartners  {
+    key BusinessPartner:    String(10);
+    LastName:               String(40);
+    FirstName:              String(40);
+  }
+
+

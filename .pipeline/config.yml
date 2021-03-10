@@ -5,9 +5,6 @@ general:
 
 # Stage configuration
 stages:
-  npmAudit:
-    auditedAdvisories:
-      - 1594
   productionDeployment:
     cfTargets:
     - org: '2f05827ftrial'
