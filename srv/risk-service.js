@@ -15,7 +15,7 @@ module.exports = async (srv) => {
     
     const BupaService = await cds.connect.to('API_BUSINESS_PARTNER');
     srv.on('READ', srv.entities.BusinessPartners, async (req) => {
-        return await BupaService.tx(req).run(req.query);
+        return BupaService.tx(req).run(req.query);
     });
    srv.on('READ', 'Risks', async (req, next) => {
         /*
