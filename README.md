@@ -1,4 +1,6 @@
-# Getting Started!!!
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RiskManagement2&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=RiskManagement2)
+
+# Getting Started
 
 Welcome to your new project.
 
