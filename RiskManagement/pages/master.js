@@ -2,7 +2,7 @@ module.exports = createPageObjects({
   Master: {
     actions: {
       // add action functions here
-       : function () {
+       function () {
         element(by.control({
           controlType: "sap.m.Button"
         })).click();
