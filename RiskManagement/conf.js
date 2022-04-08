@@ -6,8 +6,8 @@ exports.config = {
     // provide credentials as params when running the test:
     // uiveri5 --params.user=<user> --params.pass=<pass>
     "sapcloud-form": {
-      user: "${params.user}",
-      pass: "${params.pass}"
+      user: ${params.user},
+      pass: ${params.pass}
     }
   }
 };
