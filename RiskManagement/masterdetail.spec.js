@@ -8,14 +8,4 @@ describe("masterdetail", function () {
     expect(true).toBeTruthy();
   });
 
-  it("should see the Master page", function () {
-    // call the page object's actions and assertions:
-    // When.onTheMasterPage.iDoSomething();
-    // Then.onTheMasterPage.iAssertSomething();
-
-    When.onTheMasterPage. ();
-  });
-
-
-
 });
