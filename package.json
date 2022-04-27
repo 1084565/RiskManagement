@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "cds run",
-    "test": "false || true"
+    "test": "false"
   },
   "sapux": [
     "app/risks"
